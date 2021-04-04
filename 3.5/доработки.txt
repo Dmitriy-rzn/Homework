@@ -1,0 +1,20 @@
+Добрый день, уточните что вы не увидели, согласно задания мы должны прикрепить вывод lsblk пункт 14 и вывод dmesg пункт 18, 
+они приложены ввиде скриншотов 1.png и 2.png, про остальные пункты указаний нет, т.е. про недостающие пункты 
+это ваше мнение или лень было исходное задание править ?
+
+на всякий случай прикладываю список команд с помощью которых выполнялась данная работа
+
+sfdisk -d /dev/sdb | sfdisk /dev/sdс
+mdadm --create --verbose /dev/md0 -l 1 -n 2 /dev/sd{b,c}1
+mdadm --create --verbose /dev/md1 -l 0 -n 2 /dev/sd{b,c}2
+pvcreate /dev/md0 /dev/md1
+vgcreate vg00 /dev/md0 /dev/md1
+lvcreate -L 100M -n test /dev/vg00 /dev/md1
+mkfs.ext4 /dev/vg00/test
+mkdir /tmp/new
+mount /dev/vg00/test /tmp/new
+wget https://mirror.yandex.ru/ubuntu/ls-lR.gz -O /tmp/new/test.gz
+gzip -t /tmp/new/test.gz
+echo $?
+pvmove /dev/md1 /dev/md0
+mdadm /dev/md0 --fail /dev/sdb1

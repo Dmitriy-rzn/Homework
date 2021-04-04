@@ -1,0 +1,24 @@
+Добрый день
+node_exporter был установлен и настроен после презапуска поднимался
+по сути пунктов 1-3 был прикреплен скриншот 1.png с результатом проброса работы netdata на локальную машину
+к сожалению машина уже была дестройнута для задания по файловым системам.
+Для базового мониторинга можно выбрать следующие опции
+Processor load (1 min average)   
+Processor load (5 min average)
+Available memory	
+Total memory
+Incoming network traffic  
+Outgoing network traffic 
+Used disk space on /	
+Total disk space on /
+
+6)выполняем из под рута
+unshare -f --pid --mount-proc sleep 1h
+из другой консоли sudo lsns ищем пид процесса
+затем заходим в него sudo nsenter -t *PID* --pid --mount
+далее видим что наш процесс имеет pid 1
+
+7) в dmesg нашел следующие сообщение
+cgroup: fork rejected by pids controller in /user.slice/user-1000.slice/session-1.scope
+посмотрел в cat /sys/fs/cgroup/pids/user.slice/user-1000.slice/pids.max 2362 
+проверил во время выполнения fork bomb systemd-cgtop достигается это количество Tasks затем все падает
