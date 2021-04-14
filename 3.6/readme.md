@@ -36,17 +36,12 @@ Max TCP Payload= (MTU–TCP–IP) / (MTU+Ethernet+IFG) = (9100-32-20)/(9100+26+1
 
 1. На виртуалке в состоянии прослушивания находится 5 портов команда ss -t state listening либо ss -tal  
 
-State        Recv-Q       Send-Q               Local Address:Port                 Peer Address:Port       Process  
-
-LISTEN       0            4096                       0.0.0.0:sunrpc                    0.0.0.0:*
-
-LISTEN       0            4096                 127.0.0.53%lo:domain                    0.0.0.0:*
-
-LISTEN       0            128                        0.0.0.0:ssh                       0.0.0.0:*
-
-LISTEN       0            4096                          [::]:sunrpc                       [::]:*
-
-LISTEN       0            128                           [::]:ssh                          [::]:*
+* State        Recv-Q       Send-Q               Local Address:Port                 Peer Address:Port       Process  
+* LISTEN       0            4096                       0.0.0.0:sunrpc                    0.0.0.0:*
+* LISTEN       0            4096                 127.0.0.53%lo:domain                    0.0.0.0:*
+* LISTEN       0            128                        0.0.0.0:ssh                       0.0.0.0:*
+* LISTEN       0            4096                          [::]:sunrpc                       [::]:*
+* LISTEN       0            128                           [::]:ssh                          [::]:*
 
 1. С опцией -A команда tcpdump будет отображать на экране содержимое пакетов в формате ASCII:  tcpdump -A  
 С опцией -XX захватывает данные каждого пакета, включая его заголовки уровня канала, и выводит их на экран в шестнадцатеричном и ASCII форматах.
