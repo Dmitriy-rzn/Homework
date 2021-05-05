@@ -9,5 +9,5 @@ https://github.com/Dmitriy-rzn/Homework/blob/main/3.8/keepalived.conf
 for i in {1..10}; do curl -I -s 172.28.128.210>/dev/null; done и на бэкендах командой wc -l /var/log/nginx/access.log отслеживалось изменение, затем  
 был потушен keepalived на master, видим что он перехал на backup, приложены скриншоты, затем службы была запущена и ip вернулся обратно
 
-3. Нам необходимо использовать минимум 2 адреса.
+3. Нам необходимо использовать минимум 3 адреса.
 
