@@ -27,7 +27,7 @@ Cудя по статьям в интернете в докере работае
 
 2. Опубликуйте созданный форк в своем репозитории и предоставьте ответ в виде ссылки на докерхаб-репо.
  
-* docker run -d --name dmi -p 8091:80 dmitryrzn/docker
+* docker run -d --name dmi -p 8091:80 dmitryrzn/docker  
 https://hub.docker.com/r/dmitryrzn/netology-h
 * использовался проброс на виртуальную машину port.png поэтому на index.png порт 8071
 
