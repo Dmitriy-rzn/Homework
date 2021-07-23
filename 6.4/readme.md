@@ -2,7 +2,7 @@
 
 docker run --name post_net -v /home/vagrant/doker/PostgrSQL/data:/var/lib/postgresql/data -e POSTGRES_PASSWORD=QweAsd -dpostgres:13
 
-1.  
+1.Команды:  
 * вывода списка БД  
 \l
 * подключения к БД  
