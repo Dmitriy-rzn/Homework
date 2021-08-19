@@ -51,7 +51,50 @@ test=# SELECT * FROM orders_2;
   7 | Me and my bash-pet   |   499
 (5 rows)
 ```
-По идее можно было избежать воспользовавшись командой PARTITION by RANGE(price) при создании таблицы
+При создании таблицы orders можно сразу включить партицирование, пользователь работает как обычно но внутри все разделяется.
+CREATE TABLE orders (id integer, title character varying(30), price integer) PARTITION BY RANGE (price);
+CREATE TABLE orders_1 PARTITION OF orders FOR VALUES FROM (500) TO (9999999);
+CREATE TABLE orders_2 PARTITION OF orders FOR VALUES FROM (0) TO (499);
+```
+new=# \d
+                List of relations
+ Schema |   Name   |       Type        |  Owner
+--------+----------+-------------------+----------
+ public | orders   | partitioned table | postgres
+ public | orders_1 | table             | postgres
+ public | orders_2 | table             | postgres
+(3 rows)
+
+new=# INSERT INTO orders (id, title, price) VALUES (1,'Шоколад',10),(2,'Принтер',300),(3,'Книга',520),(4,'Монитор',600),
+(5,'Гитара',79);
+INSERT 0 5
+new=# select * from orders;
+ id |  title  | price
+----+---------+-------
+  1 | Шоколад |    10
+  2 | Принтер |   300
+  5 | Гитара  |    79
+  3 | Книга   |   520
+  4 | Монитор |   600
+(5 rows)
+
+new=# select * from orders_1;
+ id |  title  | price
+----+---------+-------
+  3 | Книга   |   520
+  4 | Монитор |   600
+(2 rows)
+
+new=# select * from orders_2;
+ id |  title  | price
+----+---------+-------
+  1 | Шоколад |    10
+  2 | Принтер |   300
+  5 | Гитара  |    79
+(3 rows)
+```
+
+
 
 4.  
 ```
