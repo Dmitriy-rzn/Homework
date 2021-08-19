@@ -52,9 +52,9 @@ test=# SELECT * FROM orders_2;
 (5 rows)
 ```
 При создании таблицы orders можно сразу включить партицирование, пользователь работает как обычно но внутри все разделяется.
-CREATE TABLE orders (id integer, title character varying(30), price integer) PARTITION BY RANGE (price);
-CREATE TABLE orders_1 PARTITION OF orders FOR VALUES FROM (500) TO (9999999);
-CREATE TABLE orders_2 PARTITION OF orders FOR VALUES FROM (0) TO (499);
+CREATE TABLE orders (id integer, title character varying(30), price integer) PARTITION BY RANGE (price);  
+CREATE TABLE orders_1 PARTITION OF orders FOR VALUES FROM (500) TO (9999999);  
+CREATE TABLE orders_2 PARTITION OF orders FOR VALUES FROM (0) TO (499);  
 ```
 new=# \d
                 List of relations
