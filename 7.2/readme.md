@@ -12,7 +12,7 @@ secret_key     ****************ccRM shared-credentials-file
 
 ```
 
-[План создания инстанса](https://github.com/Dmitriy-rzn/Homework/blob/main/7.2/plan.PNG)
+![План создания инстанса](https://github.com/Dmitriy-rzn/Homework/blob/main/7.2/plan.PNG)
 
 
 Ответ на вопрос: при помощи какого инструмента (из разобранных на прошлом занятии) можно создать свой образ ami?  
