@@ -1,6 +1,14 @@
 # 7.3. Основы и принцип работы Терраформ
 
+Создал бакет s3
+![Создал бакет s3](https://github.com/Dmitriy-rzn/Homework/blob/main/7.3/bucket.PNG)
 
+Итоговый результат создания инстансов
+![Итоговый результат создания инстансов](https://github.com/Dmitriy-rzn/Homework/blob/main/7.3/result.PNG)
+
+[Ссылка на репозиторий](https://github.com/Dmitriy-rzn/devops-netology/tree/master/Terraform)
+
+* Выводы консоли
 ```
 Do you want to perform these actions in workspace "prod"?
   Terraform will perform the actions described above.
