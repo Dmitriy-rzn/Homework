@@ -6,6 +6,8 @@
 Итоговый результат создания инстансов
 ![Итоговый результат создания инстансов](https://github.com/Dmitriy-rzn/Homework/blob/main/7.3/result.PNG)
 
+[Ссылка на репозиторий](https://github.com/Dmitriy-rzn/devops-netology/tree/master/Terraform)
+
 * Выводы консоли
 ```
 Do you want to perform these actions in workspace "prod"?
