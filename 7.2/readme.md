@@ -12,6 +12,14 @@ secret_key     ****************ccRM shared-credentials-file
 
 ```
 
+[План создания инстанса](https://github.com/Dmitriy-rzn/Homework/blob/main/7.2/plan.PNG)   
+
+[Cоздание инстанса](https://github.com/Dmitriy-rzn/Homework/blob/main/7.2/terraform%20applay.PNG)
+
+[Ссылка на репозиторий](https://github.com/Dmitriy-rzn/devops-netology/tree/master/Terraform)
+
+![консоль](https://github.com/Dmitriy-rzn/Homework/blob/main/7.2/instanse.PNG)
+
 Ответ на вопрос: при помощи какого инструмента (из разобранных на прошлом занятии) можно создать свой образ ami?  
 Можно использовать packer
 
