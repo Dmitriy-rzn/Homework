@@ -1,5 +1,9 @@
 # 7.3. Основы и принцип работы Терраформ
 
+[Создал бакет s3](https://github.com/Dmitriy-rzn/Homework/blob/main/7.3/bucket.PNG)
+
+![Итоговый результат создания инстансов](https://github.com/Dmitriy-rzn/Homework/blob/main/7.3/result.PNG)
+
 
 ```
 Do you want to perform these actions in workspace "prod"?
