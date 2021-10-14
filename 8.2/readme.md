@@ -11,15 +11,15 @@
 ansible-playbook -i inventory/prod.yml --ask-pass --ask-become-pass site.yml  
 
 Первый запуск:
-![Первый запуск](https://github.com/Dmitriy-rzn/Homework/tree/main/8.2/first.png)
+![Первый запуск](https://github.com/Dmitriy-rzn/Homework/blob/main/8.2/first.png)
 
 Второй запуск:
-![Второй запуск](https://github.com/Dmitriy-rzn/Homework/tree/main/8.2/second.png)
+![Второй запуск](https://github.com/Dmitriy-rzn/Homework/blob/main/8.2/second.png)
 
 На хосте с Elastic and Kibana
 elasticsearch -d -p pid && kibana
 
 Log:
-![Log](https://github.com/Dmitriy-rzn/Homework/tree/main/8.2/Log.png)
+![Log](https://github.com/Dmitriy-rzn/Homework/blob/main/8.2/Log.png)
 >>>>>>> 75325466dd1690a2a64e2fed38514e0ec5ac54b7
 
