@@ -11,7 +11,7 @@
 ansible-playbook -i inventory/prod.yml --ask-pass --ask-become-pass site.yml  
 
 Первый запуск:
-![Первый запуск](https://github.com/Dmitriy-rzn/Homework/blob/main/8.2/first.png)
+![Первый запуск](https://github.com/Dmitriy-rzn/Homework/blob/main/8.2/first.PNG?raw=true)
 
 Второй запуск:
 ![Второй запуск](https://github.com/Dmitriy-rzn/Homework/blob/main/8.2/second.png)
