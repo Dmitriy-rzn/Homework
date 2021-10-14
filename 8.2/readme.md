@@ -21,5 +21,5 @@ elasticsearch -d -p pid && kibana
 
 Log:
 ![Log](https://github.com/Dmitriy-rzn/Homework/blob/main/8.2/log.PNG?raw=true)
->>>>>>> 75325466dd1690a2a64e2fed38514e0ec5ac54b7
+
 
