@@ -1,0 +1,13 @@
+---
+  elasticsearch:
+    hosts:
+      ubuntu:
+        ansible_connection: ssh
+        ansible_user: vagrant
+        ansible_host: 172.28.128.20
+  kibana:
+    hosts:
+      ubuntu:
+        ansible_connection: ssh
+        ansible_user: vagrant
+        ansible_host: 172.28.128.20
