@@ -1,0 +1,13 @@
+---
+  elasticsearch:
+    hosts:
+      el-host:
+        ansible_host: 51.250.5.17
+  kibana:
+    hosts:
+      k-host:
+        ansible_host: 51.250.6.186
+  app:
+    hosts:
+      app-host:
+        ansible_host: 51.250.1.172
