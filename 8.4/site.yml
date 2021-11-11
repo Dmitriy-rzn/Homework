@@ -1,0 +1,10 @@
+---
+- hosts: el-host
+  roles:
+    - elastic
+- hosts: k-host
+  roles:
+    - kibana
+- hosts: app-host
+  roles:
+    - filebeat
