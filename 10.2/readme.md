@@ -21,4 +21,10 @@ Zabbix		-pull\push
 VictoriaMetrics -TSDB  
 Nagios 		-push  
 
-
+Скриншоты
+пинги
+![пинги](https://github.com/Dmitriy-rzn/Homework/blob/main/10.2/ping.PNG)   
+диск
+![диск](https://github.com/Dmitriy-rzn/Homework/blob/main/10.2/disk.PNG)
+докер
+![докер](https://github.com/Dmitriy-rzn/Homework/blob/main/10.2/docker.PNG)
