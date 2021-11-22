@@ -2,7 +2,7 @@
 
 1.   
 
-![datasource]()
+![datasource](https://github.com/Dmitriy-rzn/Homework/blob/main/10.3/data%20sources.PNG)
 
 2.   
 CPU  
@@ -23,12 +23,13 @@ avg(node_load15) /  count(count(node_cpu_seconds_total) by (cpu)) * 100
 
 node_filesystem_free_bytes{fstype=~"ext4|xfs"} / node_filesystem_size_bytes{fstype=~"ext4|xfs"}
 
-![dash]()  
+![dash](https://github.com/Dmitriy-rzn/Homework/blob/main/10.3/dash.PNG)  
 
 3.   
 
-![alerts]()  
+![alerts](https://github.com/Dmitriy-rzn/Homework/blob/main/10.3/alerts.PNG)  
 
 4.   
 
+https://github.com/Dmitriy-rzn/Homework/blob/main/10.3/dashboard.json
 
