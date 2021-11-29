@@ -6,4 +6,4 @@
 
 Тесты
 
-![]()
+![test](https://github.com/Dmitriy-rzn/Homework/blob/main/9.4/build.PNG)
