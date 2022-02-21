@@ -9,5 +9,5 @@
 Задача 3: Установить kubectl  
 сертификат был выпущен на локальные адреса
 ![](https://github.com/Dmitriy-rzn/Homework/blob/main/12.1/4.5.JPG)  
-но используя команду --insecure-skip-tls-verify
+но используя команду --insecure-skip-tls-verify подключится удалось
 ![](https://github.com/Dmitriy-rzn/Homework/blob/main/12.1/4.JPG) 
