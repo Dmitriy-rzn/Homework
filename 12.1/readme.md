@@ -6,7 +6,7 @@
 ![](https://github.com/Dmitriy-rzn/Homework/blob/main/12.1/2.JPG)  
 ![](https://github.com/Dmitriy-rzn/Homework/blob/main/12.1/2.5.JPG) 
 ![](https://github.com/Dmitriy-rzn/Homework/blob/main/12.1/3.JPG) 
-Задача 3: Установить kubectl
+Задача 3: Установить kubectl  
 сертификат был выпущен на локальные адреса
 ![](https://github.com/Dmitriy-rzn/Homework/blob/main/12.1/4.5.JPG)  
 но используя команду --insecure-skip-tls-verify
