@@ -1,0 +1,31 @@
+all:
+  hosts:
+    master:
+      ansible_host: 172.28.128.10
+      ip: 172.28.128.10
+      access_ip: 172.28.128.10
+    worker1:
+      ansible_host: 172.28.128.20
+      ip: 172.28.128.20
+      access_ip: 172.28.128.20
+    worker2:
+      ansible_host: 172.28.128.30
+      ip: 172.28.128.30
+      access_ip: 172.28.128.30
+  children:
+    kube_control_plane:
+      hosts:
+        master:
+    kube_node:
+      hosts:
+        worker1:
+        worker2:
+    etcd:
+      hosts:
+        master:
+    k8s_cluster:
+      children:
+        kube_control_plane:
+        kube_node:
+    calico_rr:
+      hosts: {}
