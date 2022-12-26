@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: frontend-backend
+  name: frontend-backend
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend-backend
+  template:
+    metadata:
+      labels:
+        app: frontend-backend
+    spec:
+      volumes:
+        - name: static
+          emptyDir: {}
+      containers:
+        - image: nginx
+          imagePullPolicy: IfNotPresent
+          name: frontend
+          volumeMounts:
+            - mountPath: "/static1"
+              name: static
+        - image: praqma/network-multitool
+          imagePullPolicy: IfNotPresent
+          name: backend
+          volumeMounts:
+            - mountPath: "/static2"
+              name: static
+          env:
+          - name: HTTP_PORT
+            value: "88"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-backend
+  namespace: default
+spec:
+  ports:
+    - name: frontend
+      port: 80
+    - name: backend
+      port: 88
+  selector:
+    app: frontend-backend
