@@ -1,6 +1,6 @@
 # 14.2 Синхронизация секретов с внешними сервисами. Vault
 
-Cоздал под с Vault c помощью vault-pod.yml, получили значение внутреннего IP и токена.
+Cоздал под с Vault c помощью [vault-pod.yml](https://github.com/Dmitriy-rzn/Homework/blob/main/14.2/vault-pod.yml), получил значение внутреннего IP и токена.
 
 ![](https://github.com/Dmitriy-rzn/Homework/blob/main/14.2/1.JPG)
 ![](https://github.com/Dmitriy-rzn/Homework/blob/main/14.2/2.JPG)
