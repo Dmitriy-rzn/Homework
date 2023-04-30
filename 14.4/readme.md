@@ -13,9 +13,9 @@ Kubernetes дожидается готовности новых pod'ов к ра
 
 yaml файлы
 
-[multi-nginx.yaml](https://github.com/Dmitriy-rzn/Homework/blob/main/14.4/multi-nginx.yaml)
-[multi-nginx.yaml](https://github.com/Dmitriy-rzn/Homework/blob/main/14.4/nginx120.yaml)
-[multi-nginx.yaml](https://github.com/Dmitriy-rzn/Homework/blob/main/14.4/nginx128.yaml)
+[multi-nginx.yaml](https://github.com/Dmitriy-rzn/Homework/blob/main/14.4/multi-nginx.yaml)<br />
+[nginx120.yaml](https://github.com/Dmitriy-rzn/Homework/blob/main/14.4/nginx120.yaml)<br />
+[nginx128.yaml](https://github.com/Dmitriy-rzn/Homework/blob/main/14.4/nginx128.yaml)
 
 
 #### Создать deployment приложения с контейнерами nginx и multitool. Версию nginx взять 1.19. Кол-во реплик - 5.
