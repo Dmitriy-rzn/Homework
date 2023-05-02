@@ -11,7 +11,7 @@
 
 3. Исправить проблему, описать, что сделано.
 
-Внесены изменения в yaml файл, добавлены nsmespaces 
+Внесены изменения в yaml файл, добавлены namespaces 
 
 [task2.yaml](https://github.com/Dmitriy-rzn/Homework/blob/main/14.5/task2.yaml)
 
@@ -19,15 +19,15 @@
 ![4](https://github.com/Dmitriy-rzn/Homework/blob/main/14.5/4.JPG)
 ![5](https://github.com/Dmitriy-rzn/Homework/blob/main/14.5/5.JPG)
 
-Проверим логи пода web-consumer: kubectl logs web-consumer-85cccb47d4-84qjj -n web
-
-![6](https://github.com/Dmitriy-rzn/Homework/blob/main/14.5/6.JPG)
-
 Тестируем подключение nginx c пода web, не работает.
 
 kubectl -n web exec web-consumer-85cccb47d4-84qjj  -- curl auth-db
 
 ![7](https://github.com/Dmitriy-rzn/Homework/blob/main/14.5/7.JPG)
+
+Проверим логи пода web-consumer: kubectl logs web-consumer-85cccb47d4-84qjj -n web
+
+![6](https://github.com/Dmitriy-rzn/Homework/blob/main/14.5/6.JPG)
 
 Пробуем тоже самое, но явно указав data 
 
