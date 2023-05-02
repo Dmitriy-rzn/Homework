@@ -3,8 +3,10 @@
 1. Установить приложение по команде: kubectl apply -f https://raw.githubusercontent.com/netology-code/kuber-homeworks/main/3.5/files/task.yaml
 
 2. Выявить проблему и описать.
+
 ![1](https://github.com/Dmitriy-rzn/Homework/blob/main/14.5/1.JPG)
 При установке получаем ошибку с namespaces, у нас нет web и data 
+
 ![2](https://github.com/Dmitriy-rzn/Homework/blob/main/14.5/2.JPG)
 
 3. Исправить проблему, описать, что сделано.
