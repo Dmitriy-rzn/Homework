@@ -3,76 +3,55 @@
 1. Установить приложение по команде: kubectl apply -f https://raw.githubusercontent.com/netology-code/kuber-homeworks/main/3.5/files/task.yaml
 
 2. Выявить проблему и описать.
-![1]()
+![1](https://github.com/Dmitriy-rzn/Homework/blob/main/14.5/1.JPG)
 При установке получаем ошибку с namespaces, у нас нет web и data 
-![2]()
+![2](https://github.com/Dmitriy-rzn/Homework/blob/main/14.5/2.JPG)
 
 3. Исправить проблему, описать, что сделано.
 
 Внесены изменения в yaml файл, добавлены nsmespaces 
 
-[task2.yaml]()
-![3]()
-![4]()
-![5]()
+[task2.yaml](https://github.com/Dmitriy-rzn/Homework/blob/main/14.5/task2.yaml)
 
-Проверим логи пода web-consumer kubectl logs web-consumer-85cccb47d4-84qjj -n web
+![3](https://github.com/Dmitriy-rzn/Homework/blob/main/14.5/3.JPG)
+![4](https://github.com/Dmitriy-rzn/Homework/blob/main/14.5/4.JPG)
+![5](https://github.com/Dmitriy-rzn/Homework/blob/main/14.5/5.JPG)
 
-![6]()
+Проверим логи пода web-consumer: kubectl logs web-consumer-85cccb47d4-84qjj -n web
+
+![6](https://github.com/Dmitriy-rzn/Homework/blob/main/14.5/6.JPG)
 
 Тестируем подключение nginx c пода web, не работает.
 
 kubectl -n web exec web-consumer-85cccb47d4-84qjj  -- curl auth-db
 
-![7]()
+![7](https://github.com/Dmitriy-rzn/Homework/blob/main/14.5/7.JPG)
 
 Пробуем тоже самое, но явно указав data 
 
 kubectl -n web exec web-consumer-85cccb47d4-84qjj  -- curl auth-db.data
 
-![8]()
- Вносим изменение в деплоймент [task2-1.yaml]()
+![8](https://github.com/Dmitriy-rzn/Homework/blob/main/14.5/8.JPG)
+
+ Вносим изменение в деплоймент [task2-1.yaml](https://github.com/Dmitriy-rzn/Homework/blob/main/14.5/task2-1.yaml)
+ 
 - while true; do curl auth-db.data; sleep 5; done
-![9]()
+
+![9](https://github.com/Dmitriy-rzn/Homework/blob/main/14.5/9.JPG)
 
 Проверяем логи kubectl logs web-consumer-685c85f94-2lmrx -n web --tail 25
 пошли обращения
 
-![10]()
+![10](https://github.com/Dmitriy-rzn/Homework/blob/main/14.5/10.JPG)
 
 4. Продемонстрировать, что проблема решена.
 Итоговые выводы и логи
 
-![11]()
+![11](https://github.com/Dmitriy-rzn/Homework/blob/main/14.5/11.JPG)
 
  kubectl -n web logs web-consumer-685c85f94-2lmrx --tail 25
-```
-<html>
-<head>
-<title>Welcome to nginx!</title>
-<style>
-    body {
-        width: 35em;
-        margin: 0 auto;
-        font-family: Tahoma, Verdana, Arial, sans-serif;
-    }
-</style>
-</head>
-<body>
-<h1>Welcome to nginx!</h1>
-<p>If you see this page, the nginx web server is successfully installed and
-working. Further configuration is required.</p>
-
-<p>For online documentation and support please refer to
-<a href="http://nginx.org/">nginx.org</a>.<br/>
-Commercial support is available at
-<a href="http://nginx.com/">nginx.com</a>.</p>
-
-<p><em>Thank you for using nginx.</em></p>
-</body>
-</html>
-100   612  100   612    0     0  36703      0 --:--:-- --:--:-- --:--:--  199k
-```
+ 
+![10](https://github.com/Dmitriy-rzn/Homework/blob/main/14.5/10.JPG)
 
 kubectl -n web describe pod web-consumer-685c85f94-2lmrx
 
