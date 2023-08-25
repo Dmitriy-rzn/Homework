@@ -81,6 +81,7 @@ export AWS_SECRET_ACCESS_KEY=<Значение `secret`>
 ### Решение
 
 Подготовим тестовое приложение состоящие из вэб странички с информацией о студенте. [html](https://github.com/Dmitriy-rzn/Homework/tree/main/diplom/webapp/html)
+
 Докер файл для создания образа. [dockerfile](https://github.com/Dmitriy-rzn/Homework/blob/main/diplom/webapp/dockerfile)
 
 Контейнеризируем данное веб-приложение с помощью Docker используя образ веб-сервера Nginx и запушим в DockerHub ссылка на image
@@ -134,11 +135,13 @@ http://158.160.121.79:32000
 ### Решение
 Для решения задачи выбрал GitLab в нем у нас были задания в течении курса, к тому же выбор GitLab сэкономил время на развертывания своих инстансов.
 [GitLab Интерфейс ci/cd](https://gitlab.com/netology754634/diplom)
+
 Подружим GitLab и наш Kubernetes, с помощью Helm устанавливаем на кластер агент и раннер, раннер в процессе исследований погиб и был переставлен заново.
 
 ![](https://github.com/Dmitriy-rzn/Homework/blob/main/diplom/agent-run.JPG)
 
-Далее в GitLab проект, были загружены Dockerfile и index.html для сборки приложения. https://gitlab.com/netology754634/diplom
+Далее в GitLab проект, были загружены Dockerfile и index.html для сборки приложения. [файлы](https://gitlab.com/netology754634/diplom)
+
 Создан файл [.gitlab-ci.yml](https://gitlab.com/netology754634/diplom/-/blob/main/.gitlab-ci.yml?ref_type=heads) c этапами build и deploy, и файл [deployment.yaml](https://gitlab.com/netology754634/diplom/-/blob/main/appdeploy/deployment.yaml?ref_type=heads) с описанием приложения, текущие настройки запускают билд при любом коммите в репозитории и билд и деплой если создали таг.
 Демонстрация работы:
 Изменяем тэг в файле index.html на 0.0.5
@@ -148,7 +151,7 @@ http://158.160.121.79:32000
 затем создаем новый тэг 0.0.5, 
 ![](https://github.com/Dmitriy-rzn/Homework/blob/main/diplom/Gitlab-index-tag.JPG)
 проходит билд и деплой
-![](https://github.com/Dmitriy-rzn/Homework/blob/main/diplom/Gitlab-index-tag-pipe.JPG)
+![](https://github.com/Dmitriy-rzn/Homework/blob/main/diplom/Gitlab-index-tag-pipe1.JPG)
 идем в наш кластер Kubernetes видим новый созданный pod 
 ![](https://github.com/Dmitriy-rzn/Homework/blob/main/diplom/kuber-pod-1.JPG)
 Заходим в него и curl`ом видим что в нем обновленное приложение
