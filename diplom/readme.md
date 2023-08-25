@@ -119,6 +119,7 @@ http://158.160.121.79:32000
 #### Установка приложения
 
 Воспользуемся Helm создаем папку файлами основных настроек [web-app](https://github.com/Dmitriy-rzn/Homework/tree/main/diplom/webapp/web-app)
+и установим наше приложение.
 
 ![](https://github.com/Dmitriy-rzn/Homework/blob/main/diplom/web-app.JPG)
 
