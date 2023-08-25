@@ -101,6 +101,9 @@ https://hub.docker.com/repository/docker/dmitryrzn/web/general
 
 ### Решение
 Для установки воспользуемся Helm (создаем неймспейс, устанавливаем пакет прометеус).
+![](https://github.com/Dmitriy-rzn/Homework/blob/main/diplom/helm-grafana.JPG)
+![](https://github.com/Dmitriy-rzn/Homework/blob/main/diplom/helm-grafana-pods.JPG)
+
 
 Для доступа извне создаем [grafana.yml](https://github.com/Dmitriy-rzn/Homework/blob/main/diplom/prom-graf/grafana.yml) с пробросом. 
 
