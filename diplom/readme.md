@@ -140,7 +140,26 @@ http://158.160.121.79:32000
 
 Далее в GitLab проект, были загружены Dockerfile и index.html для сборки приложения. https://gitlab.com/netology754634/diplom
 Создан файл [.gitlab-ci.yml](https://gitlab.com/netology754634/diplom/-/blob/main/.gitlab-ci.yml?ref_type=heads) c этапами build и deploy, и файл [deployment.yaml](https://gitlab.com/netology754634/diplom/-/blob/main/appdeploy/deployment.yaml?ref_type=heads) с описанием приложения, текущие настройки запускают билд при любом коммите в репозитории и билд и деплой если создали таг.
-Демонстрация работы
+Демонстрация работы:
+Изменяем тэг в файле index.html на 0.0.5
+![](https://github.com/Dmitriy-rzn/Homework/blob/main/diplom/Gitlab-index.JPG)
+Видим, что прошел билд образа без деплоя, 
+![](https://github.com/Dmitriy-rzn/Homework/blob/main/diplom/Gitlab-index-tag-pipe.JPG)
+затем создаем новый тэг 0.0.5, 
+![](https://github.com/Dmitriy-rzn/Homework/blob/main/diplom/Gitlab-index-tag.JPG)
+проходит билд и деплой
+![](https://github.com/Dmitriy-rzn/Homework/blob/main/diplom/Gitlab-index-tag-pipe.JPG)
+идем в наш кластер Kubernetes видим новый созданный pod 
+![](https://github.com/Dmitriy-rzn/Homework/blob/main/diplom/kuber-pod-1.JPG)
+Заходим в него и curl`ом видим что в нем обновленное приложение
+![](https://github.com/Dmitriy-rzn/Homework/blob/main/diplom/kuber-pod.JPG)
+
+## Заключение
+
+Таким образом в представленной работе рассмотрен, сильно упрощенный, но полный цикл автоматизации разработки программного продукта.
+
+
+
 
 
 
