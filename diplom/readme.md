@@ -109,7 +109,18 @@ https://hub.docker.com/repository/docker/dmitryrzn/web/general
 
 
 ![](https://github.com/Dmitriy-rzn/Homework/blob/main/diplom/grafana.JPG)
+
+Логин/Пароль
+admin prom-operator
+
 http://158.160.121.79:32000/d/efa86fd1d0c121a26444b636a3f509a8/kubernetes-compute-resources-cluster?orgId=1&refresh=10s
+http://158.160.121.79:32000
+
+#### Установка приложения
+
+Воспользуемся Helm создаем папку файлами основных настроек [web-app](https://github.com/Dmitriy-rzn/Homework/tree/main/diplom/webapp/web-app)
+
+![](https://github.com/Dmitriy-rzn/Homework/blob/main/diplom/web-app.JPG)
 
 ## Установка и настройка CI/CD
 
