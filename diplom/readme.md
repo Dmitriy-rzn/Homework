@@ -80,13 +80,12 @@ export AWS_SECRET_ACCESS_KEY=<Значение `secret`>
 
 ### Решение
 
-Подготовим тестовое приложение состоящие из вэб странички с информацией о студенте.
-https://github.com/Dmitriy-rzn/Homework/tree/main/diplom/webapp/html
-Докер файл для создания образа
-https://github.com/Dmitriy-rzn/Homework/blob/main/diplom/webapp/dockerfile
+Подготовим тестовое приложение состоящие из вэб странички с информацией о студенте. [html](https://github.com/Dmitriy-rzn/Homework/tree/main/diplom/webapp/html)
+Докер файл для создания образа. [dockerfile](https://github.com/Dmitriy-rzn/Homework/blob/main/diplom/webapp/dockerfile)
 
 Контейнеризируем данное веб-приложение с помощью Docker используя образ веб-сервера Nginx и запушим в DockerHub ссылка на image
 https://hub.docker.com/repository/docker/dmitryrzn/web/general
+
 ![](https://github.com/Dmitriy-rzn/Homework/blob/main/diplom/dockerhub.JPG)
 
 
@@ -99,6 +98,15 @@ https://hub.docker.com/repository/docker/dmitryrzn/web/general
 > Http доступ к web интерфейсу grafana.
 > Дашборды в grafana отображающие состояние Kubernetes кластера.
 > Http доступ к тестовому приложению.
+
+### Решение
+Для установки воспользуемся Helm (создаем неймспейс, устанавливаем пакет прометеус).
+
+Для доступа извне создаем [grafana.yml](https://github.com/Dmitriy-rzn/Homework/blob/main/diplom/prom-graf/grafana.yml) с пробросом. 
+
+
+![](https://github.com/Dmitriy-rzn/Homework/blob/main/diplom/grafana.JPG)
+http://158.160.121.79:32000/d/efa86fd1d0c121a26444b636a3f509a8/kubernetes-compute-resources-cluster?orgId=1&refresh=10s
 
 ## Установка и настройка CI/CD
 
