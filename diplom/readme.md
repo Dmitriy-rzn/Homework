@@ -131,6 +131,19 @@ http://158.160.121.79:32000
 > При любом коммите в репозиторие с тестовым приложением происходит сборка и отправка в регистр Docker образа.
 > При создании тега (например, v1.0.0) происходит сборка и отправка с соответствующим label в регистр, а также деплой соответствующего Docker образа в кластер Kubernetes.
 
+### Решение
+Для решения задачи выбрал GitLab в нем у нас были задания в течении курса, к тому же выбор GitLab сэкономил время на развертывания своих инстансов.
+[GitLab Интерфейс ci/cd](https://gitlab.com/netology754634/diplom)
+Подружим GitLab и наш Kubernetes, с помощью Helm устанавливаем на кластер агент и раннер, раннер в процессе исследований погиб и был переставлен заново.
+
+![](https://github.com/Dmitriy-rzn/Homework/blob/main/diplom/agent-run.JPG)
+
+Далее в GitLab проект, были загружены Dockerfile и index.html для сборки приложения. https://gitlab.com/netology754634/diplom
+Создан файл [.gitlab-ci.yml](https://gitlab.com/netology754634/diplom/-/blob/main/.gitlab-ci.yml?ref_type=heads) c этапами build и deploy, и файл [deployment.yaml](https://gitlab.com/netology754634/diplom/-/blob/main/appdeploy/deployment.yaml?ref_type=heads) с описанием приложения, текущие настройки запускают билд при любом коммите в репозитории и билд и деплой если создали таг.
+Демонстрация работы
+
+
+
 
 
 
