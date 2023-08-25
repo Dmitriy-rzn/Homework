@@ -1,8 +1,0 @@
-web_deployment:
-  image:
-    repository: dmitryrzn/web
-    tag: 0.0.1
-  
-
-app_nginx_service:
-  nodeport: 21000
